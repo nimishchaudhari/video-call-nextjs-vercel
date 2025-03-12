@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "video-call-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/speech": "^6.7.1",
+    "@google-cloud/text-to-speech": "^5.8.1",
+    "@google-cloud/translate": "^8.5.1",
+    "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.2"
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "^41.4.0"
   }
 }
