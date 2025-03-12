@@ -4,6 +4,9 @@ import SimplePeer from 'simple-peer';
 import styles from '../styles/call.module.css';
 
 export default function Call({ room, spoken, heard }) {
+  console.log('Room:', room);
+  console.log('Spoken:', spoken);
+  console.log('Heard:', heard);
   const [mutedAudio, setMutedAudio] = useState(false);
   const [mutedVideo, setMutedVideo] = useState(false);
   const [spokenLang, setSpokenLang] = useState(spoken);
@@ -27,8 +30,8 @@ export default function Call({ room, spoken, heard }) {
         remoteVideoRef.current.srcObject = remoteStream;
       });
 
-      const speech = require('@google-cloud/speech').v1p1beta1;
-      const client = new speech.SpeechClient({ keyFilename: 'credentials.json' });
+
+
       const request = {
         config: { encoding: 'LINEAR16', sampleRateHertz: 16000, languageCode: spokenLang },
         interimResults: true,
